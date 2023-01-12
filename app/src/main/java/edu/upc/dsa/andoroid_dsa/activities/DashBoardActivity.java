@@ -49,7 +49,6 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
         this.userId = sharedPreferences.getString("userId",null).toString();
         this.getUserById(this.userId);
         this.getCardViewsReady();
-        setLocale("");
     }
     @SuppressLint("NonConstantResourceId")
     @Override
@@ -69,10 +68,10 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
                 i=new Intent(this, PrincipalActivity.class);
                 startActivity(i);
                 break;
-            case R.id.run_card:
-                i=new Intent(this, UnityPlayerActivity.class);
-                startActivity(i);
-                break;
+            //case R.id.run_card:
+              //  i=new Intent(this, UnityPlayerActivity.class);
+              //  startActivity(i);
+              //  break;
             case R.id.rankingUsers:
                 i=new Intent(this,RankingActivity.class);
                 startActivity(i);
@@ -168,6 +167,8 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
         configuration.locale = new Locale(language);
         resources.updateConfiguration(configuration, metrics);
         onConfigurationChanged(configuration);
+        Intent intentRegister = new Intent(DashBoardActivity.this, DashBoardActivity.class);
+        DashBoardActivity.this.startActivity(intentRegister);
     }
 
     @Override
@@ -175,5 +176,9 @@ public class DashBoardActivity extends AppCompatActivity implements View.OnClick
         super.onConfigurationChanged(newConfiguration);
         //set strings from resources
 
+    }
+
+    public void changeLanguage(View view) {
+        setLocale(view.getTag().toString());
     }
 }
