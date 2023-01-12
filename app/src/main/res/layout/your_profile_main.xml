@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back_dif">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/play_bold"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textColor="@color/green_vibrant"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/title_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+    <EditText
+        android:id="@+id/title_profile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/play_bold"
+        android:inputType="text"
+        android:text="@string/updating_title"
+        android:textAlignment="center"
+        android:textColor="@color/green_vibrant"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:focusable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/textOpeningGadgets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_profile">
+
+        <LinearLayout
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cardview_back"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/play_regular"
+                android:lines="1"
+                android:text="@string/username"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="17sp"
+                android:textStyle="italic"></TextView>
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/play_regular"
+                android:inputType="text"
+                android:text="@string/updating_username"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/play_regular"
+                android:lines="1"
+                android:text="@string/surname"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/sur_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/play_regular"
+                android:inputType="text"
+                android:text="@string/updating_surname"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/play_regular"
+                android:lines="1"
+                android:text="@string/birthday"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="17sp"
+                android:textStyle="italic"></TextView>
+
+            <EditText
+                android:id="@+id/birth_day"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/play_regular"
+                android:inputType="text"
+                android:text="@string/updating_birthday"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/play_regular"
+                android:lines="1"
+                android:text="@string/email"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="17sp"
+                android:textStyle="italic"></TextView>
+
+            <EditText
+                android:id="@+id/e_mail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/play_regular"
+                android:inputType="text"
+                android:text="@string/updating_email"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/play_regular"
+                android:lines="1"
+                android:text="@string/password"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="17sp"
+                android:textStyle="italic"></TextView>
+
+            <EditText
+                android:id="@+id/pass_word"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/play_regular"
+                android:inputType="textPassword"
+                android:text="@string/updating_password"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/play_regular"
+                android:lines="1"
+                android:text="@string/coins"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="17sp"
+                android:textStyle="italic"></TextView>
+
+            <EditText
+                android:id="@+id/co_ins"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/play_regular"
+                android:inputType="text"
+                android:text="@string/updating_coins"
+                android:textAlignment="center"
+                android:textColor="@color/green_vibrant"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/returnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:fontFamily="@font/play_regular"
+        android:onClick="Return"
+        android:text="←"
+        android:textColor="@color/green_vibrant"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textOpeningGadgets"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/play_regular"
+        android:lines="1"
+        android:text="@string/your_bought_gadgets"
+        android:textAlignment="center"
+        android:textColor="@color/green_vibrant"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/openGadgetsUser"
+        app:layout_constraintEnd_toStartOf="@+id/textOpeningGadgets2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewUser"></TextView>
+
+    <TextView
+        android:id="@+id/textOpeningGadgets2"
+        android:layout_width="168dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/play_regular"
+        android:lines="1"
+        android:text="@string/edit_profile"
+        android:textAlignment="center"
+        android:textColor="@color/green_vibrant"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/openGadgetsUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textOpeningGadgets"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewUser"></TextView>
+
+    <Button
+        android:id="@+id/openGadgetsUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_shadow_start_color"
+        android:fontFamily="@font/play_regular"
+        android:onClick="openGadgetsOfUser"
+        android:text="@string/gadgets"
+        android:textColor="@color/green_vibrant"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textOpeningGadgets"
+        app:layout_constraintStart_toStartOf="@+id/textOpeningGadgets"
+        app:layout_constraintTop_toBottomOf="@+id/textOpeningGadgets" />
+
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_shadow_start_color"
+        android:fontFamily="@font/play_regular"
+        android:onClick="editProfile"
+        android:text="@string/edit"
+        android:textColor="@color/green_vibrant"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textOpeningGadgets2"
+        app:layout_constraintStart_toStartOf="@+id/textOpeningGadgets2"
+        app:layout_constraintTop_toTopOf="@+id/openGadgetsUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
