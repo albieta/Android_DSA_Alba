@@ -8,3 +8,6 @@ Canvis respecte el joc del dilluns que s'han implementat:
 - Canvi d'idioma (CAT, ENG)
 - Ranking de jugadors
 - Editar perfil
+- Eliminar elements comprats per un usuari
+
+Backend de producció --> Backend_DSA_Alba
